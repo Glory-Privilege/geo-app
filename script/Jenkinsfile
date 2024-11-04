@@ -4,7 +4,7 @@ pipeline{
     maven 'M2_HOME'
    }
    stages{
-     stage("SonarQube analysis") {          
+    /* stage("SonarQube analysis") {          
             steps {
              withSonarQubeEnv('sonarq') {
             sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
@@ -12,7 +12,7 @@ pipeline{
 
              }
             }
-        }
+       */ }
     stage("maven"){
         steps{ 
         sh 'mvn clean '
@@ -23,7 +23,7 @@ pipeline{
         sh 'mvn package'
         }
     }
-    stage('upload artifact'){
+  /*  stage('upload artifact'){
         steps{
             sh 'curl -uadmin:AP8gcgmmset5jeYChTJYDN6XmDd -T \
             target/bio*.jar \
