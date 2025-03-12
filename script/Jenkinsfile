@@ -2,7 +2,6 @@ pipeline {
     agent any 
     tools {
         maven 'M2_HOME'
-        sonar 'SONAR_SCANNER'
     }
     stages {
         stage("SonarQube analysis") {          
