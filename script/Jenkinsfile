@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage("SonarQube analysis") {          
             steps {
-                withSonarQubeEnv('sonar') {
+                withSonarQubeEnv('sonarQube') {
                     sh '''
                     mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
                         -Dsonar.projectKey=Glory-Privilege_geo-app
